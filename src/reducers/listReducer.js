@@ -28,7 +28,7 @@ const initialState = [
   },
 ];
 
-export default function listReducer(state = initialState, action) {
+const listReducer = (state = initialState, action) => {
   const { index, id, name, price } = { ...action.payload };
 
   switch (action.type) {
@@ -51,3 +51,5 @@ export default function listReducer(state = initialState, action) {
       return state;
   }
 }
+
+export default listReducer;
